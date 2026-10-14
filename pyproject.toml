@@ -1,0 +1,33 @@
+[project]
+name = "stickytape"
+version = "0.2.2"
+description = "Convert Python packages into a single script"
+authors = [
+    {name= "Michael Williamson",email = "mike@zwobble.org"},
+    {name = "DJ Stomp",email = "85457381+DJStompZone@users.noreply.github.com"}
+]
+license = "BSD-2-Clause"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+]
+readme = "README.rst"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.scripts]
+stickytape =" stickytape.main:main"
+
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.1.1,<10.0.0)",
+    "virtualenv (>=21.14.7,<22.0.0)"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest (>=9.1.1,<10.0.0)",
+    "virtualenv (>=21.14.7,<22.0.0)"
+]
